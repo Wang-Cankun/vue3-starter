@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@vueuse/core": "^8.4.2",
+    "echarts": "^5.3.2",
     "vite-plugin-md": "^0.13.1",
     "vue": "^3.2.33",
+    "vue-echarts": "^6.0.3",
     "vue-router": "^4.0.15"
   },
   "devDependencies": {

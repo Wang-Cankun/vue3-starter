@@ -16,7 +16,8 @@
     "typecheck",
     "Attributify",
     "arrowParens",
-    "composables"
+    "composables",
+    "Echarts"
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll": false,

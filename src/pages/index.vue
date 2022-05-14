@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import EchartsExample from '../components/EchartsExample.vue'
 const name = $ref('')
 
 const router = useRouter()
@@ -26,6 +27,7 @@ const go = () => {
     <n-card>
       This is UI card with icon:
       <div i-carbon-search text-2x inline-block />
+      <echarts-example />
     </n-card>
     <p>
       <em text-sm op75>Opinionated Vite Starter Template</em>
