@@ -12,11 +12,16 @@
     "intlify",
     "vitejs",
     "unplugin",
-    "pnpm"
+    "pnpm",
+    "typecheck",
+    "Attributify",
+    "arrowParens",
+    "composables"
   ],
-  "prettier.enable": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll": false,
+    "source.fixAll.eslint": true, // this allows ESLint to auto fix on save
+    "source.organizeImports": false
   },
   "files.associations": {
     "*.css": "postcss"

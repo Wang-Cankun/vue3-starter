@@ -32,7 +32,7 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-components
     Components({
       dts: true,
-      // add cutom resolvers
+      // add custom resolvers
       resolvers: [NaiveUiResolver()],
     }),
 
