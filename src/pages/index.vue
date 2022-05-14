@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import EchartsExample from '../components/EchartsExample.vue'
-const name = $ref('')
+import { useUserStore } from '~/stores/store'
+import { useCounter } from '~/stores/counter'
 
-const router = useRouter()
+const user = useUserStore()
+const counter = useCounter()
+const name = $ref(user.savedName)
+
 const { x, y } = useMouse()
+const router = useRouter()
 const go = () => {
   if (name)
     router.push(`/hi/${encodeURIComponent(name)}`)
@@ -19,16 +24,19 @@ const go = () => {
         href="https://github.com/antfu/vitesse-lite"
         target="_blank"
       >
-        Vitesse Lite
+        Count: {{ counter.count }} | Name: {{ name }}
       </a>
     </p>
     <div>pos: {{ x }}, {{ y }}</div>
-    <n-button>btn-1</n-button>
-    <n-card>
-      This is UI card with icon:
-      <div i-carbon-search text-2x inline-block />
-      <echarts-example />
-    </n-card>
+    <n-button @click="counter.increment">
+      Increment
+    </n-button>
+    <n-button @click="counter.decrement">
+      Decrement
+    </n-button>
+    <n-button @click="counter.reset">
+      Reset
+    </n-button>
     <p>
       <em text-sm op75>Opinionated Vite Starter Template</em>
     </p>
@@ -55,5 +63,10 @@ const go = () => {
         Go
       </button>
     </div>
+    <n-card>
+      This is UI card with icon:
+      <div i-carbon-search text-2x inline-block />
+      <echarts-example :title="name" :counter="counter.count" />
+    </n-card>
   </div>
 </template>
