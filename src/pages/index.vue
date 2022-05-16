@@ -5,12 +5,18 @@ import EchartsExample from '../components/EchartsExample.vue'
 import { useUserStore } from '~/stores/store'
 import { useCounter } from '~/stores/counter'
 
+const siteData = reactive({
+  title: 'My website title',
+  description: 'My beautiful website',
+})
+
 useHead({
-  title: 'Custom Title',
+  // Can be static or computed
+  title: computed(() => siteData.title),
   meta: [
     {
       name: 'description',
-      content: 'Website description',
+      content: computed(() => siteData.description),
     },
   ],
 })
