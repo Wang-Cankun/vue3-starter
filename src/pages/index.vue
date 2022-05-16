@@ -24,7 +24,16 @@ useHead({
 const user = useUserStore()
 const counter = useCounter()
 const name = $ref(user.savedName)
-const { run, data, loading } = useRequest('https://osubmi.com/api/scread/dataset', {
+const { run: run1, data: data1, loading: loading1 } = useRequest('https://osubmi.com/api/scread/dataset', {
+  cacheKey: 'date',
+  cacheTime: 300000,
+  staleTime: 3600000, // 60 minutes
+
+})
+const { run: run2, data: data2, loading: loading2 } = useRequest('https://osubmi.com/api/scread/dataset', {
+  cacheKey: 'date',
+  cacheTime: 300000,
+  staleTime: 3600000, // 60 minutes
 
 })
 const { x, y } = useMouse()
@@ -57,10 +66,12 @@ const go = () => {
     <n-button @click="counter.reset">
       Reset
     </n-button>
-    <n-button @click="run">
-      API Loading: {{ loading }}
+    <n-button @click="run1">
+      API Loading: {{ loading1 }}
     </n-button>
-
+    <n-button @click="run2">
+      API Loading: {{ loading2 }}
+    </n-button>
     <div py-4 />
 
     <input
@@ -89,7 +100,11 @@ const go = () => {
       <echarts-example :title="name" :counter="counter.count" />
     </n-card>
     <p>
-      <em text-sm op75>API: {{ data }}</em>
+      <em text-sm op75>API1: {{ data1 }}</em>
+    </p>
+
+    <p>
+      <em text-sm op75>API2: {{ data2 }}</em>
     </p>
   </div>
 </template>

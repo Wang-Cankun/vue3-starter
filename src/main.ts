@@ -17,7 +17,6 @@ const router = createRouter({
   routes,
 })
 setGlobalOptions({
-  manual: true,
   throttleInterval: 500,
 })
 const pinia = createPinia()
