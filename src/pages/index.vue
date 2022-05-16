@@ -1,8 +1,19 @@
 <script setup lang="ts">
 import { useRequest } from 'vue-request'
+import { useHead } from '@vueuse/head'
 import EchartsExample from '../components/EchartsExample.vue'
 import { useUserStore } from '~/stores/store'
 import { useCounter } from '~/stores/counter'
+
+useHead({
+  title: 'Custom Title',
+  meta: [
+    {
+      name: 'description',
+      content: 'Website description',
+    },
+  ],
+})
 
 const user = useUserStore()
 const counter = useCounter()
