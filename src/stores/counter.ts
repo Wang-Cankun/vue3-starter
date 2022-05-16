@@ -1,12 +1,13 @@
 import { defineStore } from 'pinia'
-
 export interface ICounterState {
   count: number
+  result: any
 }
 
 export const useCounter = defineStore('counter', {
   state: (): ICounterState => ({
     count: 0,
+    result: 'init',
   }),
   actions: {
     increment() {
@@ -20,6 +21,9 @@ export const useCounter = defineStore('counter', {
     },
     increment2x() {
       this.count *= 2
+    },
+    find() {
+      this.result = 1
     },
   },
 })

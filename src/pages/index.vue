@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useRequest } from 'vue-request'
 import EchartsExample from '../components/EchartsExample.vue'
 import { useUserStore } from '~/stores/store'
 import { useCounter } from '~/stores/counter'
@@ -6,7 +7,9 @@ import { useCounter } from '~/stores/counter'
 const user = useUserStore()
 const counter = useCounter()
 const name = $ref(user.savedName)
+const { run, data, loading } = useRequest('https://osubmi.com/api/scread/dataset', {
 
+})
 const { x, y } = useMouse()
 const router = useRouter()
 const go = () => {
@@ -37,8 +40,11 @@ const go = () => {
     <n-button @click="counter.reset">
       Reset
     </n-button>
+    <n-button @click="run">
+      API Loading: {{ loading }}
+    </n-button>
     <p>
-      <em text-sm op75>Opinionated Vite Starter Template</em>
+      <em text-sm op75>API: {{ data }}</em>
     </p>
 
     <div py-4 />
