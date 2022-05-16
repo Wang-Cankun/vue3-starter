@@ -26,16 +26,10 @@ const counter = useCounter()
 const name = $ref(user.savedName)
 const { run: run1, data: data1, loading: loading1 } = useRequest('https://osubmi.com/api/scread/dataset', {
   cacheKey: 'date',
-  cacheTime: 300000,
-  staleTime: 3600000, // 60 minutes
-
 })
-const { run: run2, data: data2, loading: loading2 } = useRequest('https://osubmi.com/api/scread/dataset', {
-  cacheKey: 'date',
-  cacheTime: 300000,
-  staleTime: 3600000, // 60 minutes
+const { run: run2, data: data2, loading: loading2 } = useRequest('https://osubmi.com/api/scread/dataset',
 
-})
+)
 const { x, y } = useMouse()
 const router = useRouter()
 const go = () => {
