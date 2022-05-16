@@ -60,9 +60,6 @@ const go = () => {
     <n-button @click="run">
       API Loading: {{ loading }}
     </n-button>
-    <p>
-      <em text-sm op75>API: {{ data }}</em>
-    </p>
 
     <div py-4 />
 
@@ -91,5 +88,8 @@ const go = () => {
       <div i-carbon-search text-2x inline-block />
       <echarts-example :title="name" :counter="counter.count" />
     </n-card>
+    <p>
+      <em text-sm op75>API: {{ data }}</em>
+    </p>
   </div>
 </template>
