@@ -17,7 +17,8 @@
     "Attributify",
     "arrowParens",
     "composables",
-    "Echarts"
+    "Echarts",
+    "nprogress"
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll": false,

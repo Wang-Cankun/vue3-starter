@@ -5,7 +5,7 @@ import { createPinia } from 'pinia'
 import routes from 'virtual:generated-pages'
 import { setGlobalOptions } from 'vue-request'
 import NProgress from 'nprogress'
-import App from './App.vue' 
+import App from './App.vue'
 import '@unocss/reset/tailwind.css'
 import './styles/main.css'
 import 'uno.css'
@@ -25,7 +25,7 @@ router.afterEach(() => {
   NProgress.done()
 })
 setGlobalOptions({
-  throttleInterval: 500, 
+  throttleInterval: 500,
   cacheTime: 300000,
   staleTime: 3600000, // 60 minutes
 })

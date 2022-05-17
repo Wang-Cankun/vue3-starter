@@ -10,6 +10,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@types/nprogress": "^0.2.0",
     "@vueuse/core": "^8.4.2",
     "@vueuse/head": "^0.7.6",
     "echarts": "^5.3.2",
