@@ -8,8 +8,6 @@ declare module '@vue/runtime-core' {
     Counter: typeof import('./src/components/Counter.vue')['default']
     EchartsExample: typeof import('./src/components/EchartsExample.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
-    NButton: typeof import('naive-ui')['NButton']
-    NCard: typeof import('naive-ui')['NCard']
     Pie: typeof import('./src/components/chart/Pie.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
