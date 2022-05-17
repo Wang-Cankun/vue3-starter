@@ -2,10 +2,11 @@ import {
   defineConfig,
   presetAttributify,
   presetIcons,
+  presetTypography,
   presetUno,
   presetWebFonts,
-  // transformerDirectives,
-  // transformerVariantGroup,
+  transformerDirectives,
+  transformerVariantGroup,
 } from 'unocss'
 
 export default defineConfig({
@@ -22,20 +23,23 @@ export default defineConfig({
   presets: [
     presetUno(),
     presetAttributify(),
+    presetTypography(),
     presetIcons({
       scale: 1.2,
       warn: true,
     }),
     presetWebFonts({
       fonts: {
-        sans: 'DM Sans',
-        serif: 'DM Serif Display',
-        mono: 'DM Mono',
+        // Helvetica Neue
+        sans: 'Roboto Flex',
+        serif: 'Roboto Serif',
+        mono: 'Roboto Mono',
       },
     }),
   ],
-  // transformers: [
-  //   transformerDirectives(),
-  //   transformerVariantGroup(),
-  // ],
+  safelist: 'prose prose-sm m-auto text-left'.split(' '),
+  transformers: [
+    transformerDirectives(),
+    transformerVariantGroup(),
+  ],
 })

@@ -1,3 +1,5 @@
+@import './markdown.css';
+
 html,
 body,
 #app {
@@ -9,7 +11,6 @@ body,
 html.dark {
   background: #121212;
 }
-
 
 #nprogress {
   pointer-events: none;

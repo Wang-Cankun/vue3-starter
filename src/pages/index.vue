@@ -51,21 +51,26 @@ const go = () => {
       </a>
     </p>
     <div>pos: {{ x }}, {{ y }}</div>
-    <n-button @click="counter.increment">
+    <NButton @click="counter.increment">
       Increment
-    </n-button>
-    <n-button @click="counter.decrement">
+    </NButton>
+    <NButton @click="counter.decrement">
       Decrement
-    </n-button>
-    <n-button @click="counter.reset">
+    </NButton>
+    <NButton @click="counter.reset">
       Reset
-    </n-button>
-    <n-button @click="run1">
+    </NButton>
+    <NButton @click="run1">
       API Loading: {{ loading1 }}
-    </n-button>
-    <n-button @click="run2">
+    </NButton>
+    <NButton @click="run2">
       API Loading: {{ loading2 }}
-    </n-button>
+    </NButton>
+    <RouterLink to="/about">
+      <NButton>
+        About
+      </NButton>
+    </RouterLink>
     <div py-4 />
 
     <input

@@ -18,7 +18,9 @@
     "arrowParens",
     "composables",
     "Echarts",
-    "nprogress"
+    "nprogress",
+    "Roboto",
+    "Neue"
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll": false,
